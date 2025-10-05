@@ -1,0 +1,249 @@
+    .fnav{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.fnav1 a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.fnav2{
+    padding-right:20px;
+    display: flex;
+    gap: .5cm;
+    margin-top: 7px;
+    color: white;
+}
+/* ----------------------dark mode------------------------- */
+
+/* ----------------------------------------------------------------------------------- */
+.bg-img{
+     position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh; /* changed 600px to 100vh for consistency */
+  z-index: -1;
+  display: block;
+
+}
+.img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh; /* full screen */
+  overflow: hidden;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+/* ----------------tonav---------------------------------- */
+.navbar-fluid {
+  position: relative;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.navbar-fluid .logo{
+    color: white;
+}
+.nav-links ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin-top: 10px;
+}
+.nav-links ul a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    margin-right: 20px;
+}
+.nav-links ul a:hover{
+    color: green;
+}
+.toggle{
+    margin-right: 50px;
+    margin-top: 10px;
+    color: white;
+    font-size: x-large;
+    display: none;
+
+} 
+ /* -----------------------tognav------------------------- */
+
+section .h2 h2{
+    position: relative;
+    top: 15px;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+section .para{
+    position: relative;
+    color: white;
+}
+section .h5{
+    position: relative;
+    color: white;
+    font-size: small;
+}
+.sports-item{
+    position: relative;
+}
+.log-card{
+    box-shadow: 0px 0px 10px 0px white;
+}
+/* ---------------------------------------------------------------------------------- */
+.disc1{
+    position: relative;
+    top: 88px;
+    
+}
+.disc1 img{
+    width: 200px;
+}
+/* ------------------------------------------------------------------------------ */
+
+.card1{
+    margin-top: 100px;
+}
+
+/* /--------------------------------------key frams---------------- */
+.image-zoom img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.image-zoom:hover img {
+  transform: rotate(2deg) scale(1.03);
+  filter: brightness(110%);
+}
+
+
+/* ---------------------------------------key frams------------------------ */
+
+@media (max-width:700px){
+    .logg{
+        margin-top: -100px;
+    }
+    /* ----------------------------------------------- toggle----- */
+   .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    background-color: rgb(28, 26, 26);
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    padding: 10px 0;
+    box-shadow: 0px 0px 10px 0px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-links ul li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .toggle {
+    display: block;
+  }
+  /* ---------------------------------------------------------toggle------- */
+  .drop-menu {
+    position: static;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .drop-menu.show {
+    max-height: 500px;
+  }
+  
+    .fnav2{
+        padding-right: 10px;
+    }
+    .toggle{
+        display: block;
+        margin-right: 10px;
+    }
+    .disc1 img{
+        width: 150px;
+    }
+}
+@media (max-width:500px) {
+    section .h2 h2{
+        font-size: 32px;
+        margin-top: -20px;
+    }
+    .disc1 img{
+        width: 100px;
+    }
+    .nav-links ul a{
+      font-size: medium;
+    }
+    
+  }
+
+
+
+  /* ---------------------dark mode-------- */
+.dark-mode {
+  background-color: black;
+  color: white;
+  
+}
+
+.card.dark-mode {
+  background-color: black;
+  border-color: white;
+}
+.dark-toggle {
+  position: fixed;
+  bottom: 15px;
+  right: 70px;
+  z-index: 1000;
+}
+
+@media (max-width: 576px) {
+  .dark-toggle button {
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+}
+
+@media (max-width: 407px) {
+  .dark-toggle button {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+}
+/* ----------------------------------dark mode--------------- */

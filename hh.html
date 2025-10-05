@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Redirect</title>
+</head>
+<body>
+
+<select id="sports">
+  <option value="" disabled selected>-- Choose a sport --</option>
+  <option value="football.html">Football</option>
+  <option value="cricket.html">Cricket</option>
+</select>
+
+<button onclick="goToPage()">Go</button>
+
+<script>
+  function goToPage() {
+    const page = document.getElementById("sports").value;
+    alert("Redirecting to: " + page); // Test if JS is working
+    if (page) {
+      window.location.href = page;
+    }
+  }
+</script>
+
+</body>
+</html>
