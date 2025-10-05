@@ -25,9 +25,9 @@
   </div>
   <div class="nav-links" id="navLinks">
     <ul>
-      <li><a href="main.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a class="link" href="main.html#items-info">Items Info</a></li>
+      <li><a class="link" href="index.html#items-info">Items Info</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
@@ -302,6 +302,7 @@
 // -----------------items click button------------------------------------
   function goToSportPage() {
     const sport = document.getElementById("sports").value;
+    alert("Redirecting to: " + sport);
     if (sport) {
       window.location.href = sport;
     } else {
